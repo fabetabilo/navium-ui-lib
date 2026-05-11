@@ -1,6 +1,6 @@
 {
   "name": "navium-ui-lib",
-  "version": "1.0.0",
+  "version": "2.0.0",
   "description": "Librería de componentes UI React con estilos consistentes y personalizables para la plataforma Navium",
   "main": "dist/navium-ui-lib.cjs.js",
   "module": "dist/navium-ui-lib.esm.js",
