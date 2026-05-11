@@ -23,6 +23,37 @@ body {
   background-color: var(--color-white);
 }
 
+/* Standard HTML Typography */
+h1, h2, h3 {
+  font-family: var(--font-family-title);
+  font-weight: var(--font-weight-semibold);
+  line-height: var(--line-height-tight);
+  margin: 0 0 var(--spacing-4) 0;
+}
+
+h1 {
+  font-size: var(--font-size-h1);
+}
+
+h2 {
+  font-size: var(--font-size-h2);
+}
+
+h3 {
+  font-size: var(--font-size-h3);
+}
+
+p {
+  font-family: var(--font-family-sans);
+  font-size: var(--font-size-p);
+  line-height: var(--line-height-normal);
+  margin: 0 0 var(--spacing-4) 0;
+}
+
+p:last-child {
+  margin-bottom: 0;
+}
+
 /* Focus styles */
 :focus-visible {
   outline: 2px solid var(--color-primary);
