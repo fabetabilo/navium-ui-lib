@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { createRoot } from 'react-dom/client';
-import { Button } from '../index';
+import { Button, Footer } from '../index';
+import naviumLogo from './navium-v1.png';
 import './demo.css';
 
 const App = () => {
@@ -139,7 +140,49 @@ const App = () => {
             ))}
           </div>
         </section>
+
+        {/* Footer Section */}
+        <section className="demo-section">
+          <h2 className="section-title">Footer Component</h2>
+          <p className="showcase-subtitle">El Footer ocupa todo el ancho de la pantalla (fuera del contenedor blanco)</p>
+          <p className="showcase-subtitle">Haz clic en los botones para cambiar entre las 3 vistas:</p>
+          <div className="button-group">
+            <Button variant="primary" onClick={() => window.location.hash = 'comando'}>Centro de Mando</Button>
+            <Button variant="secondary" onClick={() => window.location.hash = 'operario'}>Operario de Patio</Button>
+            <Button variant="primary" onClick={() => window.location.hash = 'sucursal'}>Sucursal</Button>
+          </div>
+        </section>
       </main>
+
+      {/* Footer examples outside main to show full width */}
+      {window.location.hash === '#operario' ? (
+        <Footer 
+          logo={naviumLogo}
+          moduleLinks={[
+            { label: 'Mi Turno', href: '#shift' },
+            { label: 'Tareas Pendientes', href: '#tasks' },
+            { label: 'Reportar Incidente', href: '#incident' },
+          ]}
+        />
+      ) : window.location.hash === '#sucursal' ? (
+        <Footer 
+          logo={naviumLogo}
+          moduleLinks={[
+            { label: 'Agendar Bloque', href: '#schedule' },
+            { label: 'Mis Reservas', href: '#reservations' },
+            { label: 'Historial de Agendamientos', href: '#history' },
+          ]}
+        />
+      ) : (
+        <Footer 
+          logo={naviumLogo}
+          moduleLinks={[
+            { label: 'Dashboard', href: '#dashboard' },
+            { label: 'Reportes', href: '#reports' },
+            { label: 'Configuración', href: '#settings' },
+          ]}
+        />
+      )}
 
       <footer className="demo-footer">
         <p>Navium UI Lib - Demo Interactiva</p>
