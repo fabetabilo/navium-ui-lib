@@ -1,18 +1,29 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
+
 /* CSS Variables for Design System */
 :root {
   /* Platform colors */
-  --color-main: #1f2123;
-  --color-accent: #f2b40e;
+  --color-surface: #1f2123;
+  --color-bg: #ffffff;
+  
+  /* Font Colors */
+  --font-color-primary: #111827;
+  --font-color-secondary: #ffffff;
 
   /* Primary Colors */
-  --color-primary: #303964;
-  --color-primary-hover: #2563eb;
-  --color-primary-active: #1d4ed8;
+  --color-primary: #f2b40e;
+  --color-primary-hover: #dd9c0f;
+  --color-primary-active: #c98c09;
   
   /* Secondary Colors */
-  --color-secondary: #6b7280;
-  --color-secondary-hover: #4b5563;
-  --color-secondary-active: #374151;
+  --color-secondary: #303964;
+  --color-secondary-hover: #2a3156;
+  --color-secondary-active: #242948;
+  
+  /* Tertiary Colors */
+  --color-tertiary: #6b7280;
+  --color-tertiary-hover: #4b5563;
+  --color-tertiary-active: #374151;
   
   /* Semantic Colors */
   --color-success: #10b981;
@@ -26,6 +37,11 @@
   --color-error: #ef4444;
   --color-error-hover: #dc2626;
   --color-error-active: #b91c1c;
+  
+  /* Info Variant */
+  --color-info: #1F51FF;
+  --color-info-hover: #1A45E6;
+  --color-info-active: #1539CC;
   
   /* Ghost/Neutral Colors */
   --color-ghost: #6b7280;
@@ -46,15 +62,25 @@
   --color-gray-900: #111827;
   
   /* Typography */
-  --font-family-sans: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+  --font-family-title: 'Inter', sans-serif;
+  --font-family-accent: 'Bebas Neue', sans-serif;
+  --font-family-sans: 'Lato', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+  
+  /* Font Sizes */
   --font-size-xs: 0.75rem;
   --font-size-sm: 0.875rem;
   --font-size-base: 1rem;
   --font-size-lg: 1.125rem;
   --font-size-xl: 1.25rem;
   --font-size-2xl: 1.5rem;
-  --font-size-3xl: 1.875rem;
-  --font-size-4xl: 2.25rem;
+  --font-size-3xl: 2.25rem;
+  --font-size-4xl: 2.85rem;
+  
+  /* Standard HTML Typography Sizes */
+  --font-size-h1: var(--font-size-4xl);
+  --font-size-h2: var(--font-size-3xl);
+  --font-size-h3: var(--font-size-2xl);
+  --font-size-p: var(--font-size-base);
   
   --line-height-tight: 1.25;
   --line-height-normal: 1.5;
