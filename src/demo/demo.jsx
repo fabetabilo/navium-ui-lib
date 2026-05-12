@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 import { createRoot } from 'react-dom/client';
-import { Button, FormGroup } from '../index';
-import { Button, Footer } from '../index';
+import { Button, Footer, FormGroup } from '../index';
 import naviumLogo from './navium-v1.png';
 import './demo.css';
 
@@ -142,41 +141,40 @@ const App = () => {
           </div>
         </section>
 
-        {/* Button Section - All Combinations */}
+        {/* FormGroup Section */}
         <section className="demo-section">
-            <h2 className="section-title">Inputs</h2>
-            <div className="component-showcase">
-              <div className="input-grid">
-                <FormGroup
-                  label="Correo"
-                  id="email"
-                  required
-                  helperText="Ingresa tu correo electrónico"
-                >
-                  <input type="email" placeholder="nombre@navium.com" />
-                </FormGroup>
+          <h2 className="section-title">Inputs</h2>
+          <div className="component-showcase">
+            <div className="input-grid">
+              <FormGroup
+                label="Correo"
+                id="email"
+                required
+                helperText="Ingresa tu correo electrónico"
+              >
+                <input type="email" placeholder="nombre@navium.com" />
+              </FormGroup>
 
-                <FormGroup
-                  label="Usuario"
-                  id="user"
-                  helperText="Estado focus (Contorno color primario)"
-                >
-                  <input type="text" placeholder="navium.user" />
-                </FormGroup>
+              <FormGroup
+                label="Usuario"
+                id="user"
+                helperText="Estado focus (Contorno color primario)"
+              >
+                <input type="text" placeholder="navium.user" />
+              </FormGroup>
 
-                <FormGroup
-                  label="Contraseña"
-                  id="password"
-                  required
-                  error
-                  helperText="La contraseña es incorrecta, Intentalo de nuevo."
-                >
-                  <input type="password" placeholder="••••••••" />
-                </FormGroup>
-              </div>
+              <FormGroup
+                label="Contraseña"
+                id="password"
+                required
+                error
+                helperText="La contraseña es incorrecta, Intentalo de nuevo."
+              >
+                <input type="password" placeholder="••••••••" />
+              </FormGroup>
             </div>
+          </div>
         </section>
-      </main>
 
         {/* Footer Section */}
         <section className="demo-section">
