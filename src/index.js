@@ -4,11 +4,8 @@ import './styles/variables.css';
 
 // Import components
 import Button from './components/Button/Button.jsx';
+import Footer from './components/Footer/Footer.jsx';
+import FormGroup from './components/FormGroup/FormGroup.jsx';
 
 // Export components
-export { Button };
-
-// Default export with all components
-export default {
-  Button,
-};
+export { Button, Footer, FormGroup };
