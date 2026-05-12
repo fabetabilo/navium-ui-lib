@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { createRoot } from 'react-dom/client';
-import { Button } from '../index';
+import { Button, FormGroup } from '../index';
 import './demo.css';
 
 const App = () => {
@@ -139,8 +139,42 @@ const App = () => {
             ))}
           </div>
         </section>
-      </main>
 
+        {/* Button Section - All Combinations */}
+        <section className="demo-section">
+            <h2 className="section-title">Inputs</h2>
+            <div className="component-showcase">
+              <div className="input-grid">
+                <FormGroup
+                  label="Correo"
+                  id="email"
+                  required
+                  helperText="Ingresa tu correo electrónico"
+                >
+                  <input type="email" placeholder="nombre@navium.com" />
+                </FormGroup>
+
+                <FormGroup
+                  label="Usuario"
+                  id="user"
+                  helperText="Estado focus (Contorno color primario)"
+                >
+                  <input type="text" placeholder="navium.user" />
+                </FormGroup>
+
+                <FormGroup
+                  label="Contraseña"
+                  id="password"
+                  required
+                  error
+                  helperText="La contraseña es incorrecta, Intentalo de nuevo."
+                >
+                  <input type="password" placeholder="••••••••" />
+                </FormGroup>
+              </div>
+            </div>
+        </section>
+      </main>
       <footer className="demo-footer">
         <p>Navium UI Lib - Demo Interactiva</p>
       </footer>
