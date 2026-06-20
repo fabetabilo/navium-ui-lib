@@ -4,8 +4,22 @@ import babel from '@rollup/plugin-babel';
 import terser from '@rollup/plugin-terser';
 import peerDepsExternal from 'rollup-plugin-peer-deps-external';
 import postcss from 'rollup-plugin-postcss';
+import fs from 'node:fs';
 
 const production = !process.env.ROLLUP_WATCH;
+
+const emitVariablesCss = () => ({
+  name: 'emit-variables-css',
+  generateBundle() {
+    const variablesCss = fs.readFileSync('src/styles/variables.css', 'utf8');
+
+    this.emitFile({
+      type: 'asset',
+      fileName: 'variables.css',
+      source: variablesCss,
+    });
+  },
+});
 
 export default [
   // ESM and CJS builds
@@ -51,6 +65,7 @@ export default [
         output: 'dist/styles.css',
         minimize: production,
       }),
+      emitVariablesCss(),
       production && terser(),
     ].filter(Boolean),
     external: ['react', 'react-dom'],

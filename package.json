@@ -4,7 +4,7 @@
   "description": "Librería de componentes UI React con estilos consistentes y personalizables para la plataforma Navium",
   "main": "dist/navium-ui-lib.cjs.js",
   "module": "dist/navium-ui-lib.esm.js",
-  "browser": "dist/navium-ui-lib.umd.js",
+  "browser": "dist/navium-ui-lib.esm.js",
   "files": [
     "dist"
   ],

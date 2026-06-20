@@ -1,0 +1,46 @@
+/* EmptyState Component Styles */
+.empty-state {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 40px 20px;
+    text-align: center;
+}
+
+.empty-state__icon {
+    font-size: 48px;
+    margin-bottom: 16px;
+    opacity: 0.6;
+}
+
+.empty-state__title {
+    margin: 0 0 8px;
+    font-size: var(--font-size-lg);
+    font-weight: var(--font-weight-semibold);
+    color: var(--font-color-primary);
+}
+
+.empty-state__message {
+    margin: 0 0 24px;
+    font-size: var(--font-size-sm);
+    color: var(--color-gray-500);
+    max-width: 300px;
+    line-height: 1.5;
+}
+
+.empty-state__action {
+    padding: 10px 20px;
+    background-color: var(--color-primary);
+    color: white;
+    border: none;
+    border-radius: var(--border-radius-md);
+    font-size: var(--font-size-sm);
+    font-weight: var(--font-weight-medium);
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.empty-state__action:hover {
+    background-color: var(--color-primary-hover);
+}
